@@ -125,7 +125,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="IMF-QP-jzm">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="klf-3Y-1BY" kind="presentation" id="wxQ-R5-E9T"/>
+                                <segue destination="klf-3Y-1BY" kind="presentation" modalPresentationStyle="fullScreen" id="wxQ-R5-E9T"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -162,18 +162,21 @@
                     </view>
                     <navigationItem key="navigationItem" id="0UZ-8A-G1R">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="653-DV-wfo">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="systemTealColor"/>
                             <connections>
                                 <action selector="cancel:" destination="tF6-2Z-bR9" id="PWF-ey-EMp"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" style="plain" id="uZT-7E-FNo">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="systemTealColor"/>
                             <connections>
                                 <action selector="tweet:" destination="tF6-2Z-bR9" id="auP-Qz-RMY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tweetTextView" destination="DiB-fm-tTS" id="ek6-3h-HIH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nB7-wJ-oUs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,9 +186,10 @@
         <scene sceneID="Z4k-MV-DfQ">
             <objects>
                 <navigationController modalPresentationStyle="fullScreen" id="ksM-ZZ-vMo" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Sw-ce-aig">
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFill" id="4Sw-ce-aig">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
                         <color key="barTintColor" systemColor="systemTealColor"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
